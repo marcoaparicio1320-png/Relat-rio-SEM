@@ -1,0 +1,98 @@
+% ==============================================================================
+% Secção 1: Introdução
+% ==============================================================================
+
+\subsection{Título do projeto (em português)}
+\begin{campotexto}
+\instrucao{Título (máx. 130 caracteres)}
+\end{campotexto}
+
+\subsection{Título do projeto (em inglês)}
+\begin{campotexto}
+\instrucao{Project Title (max. 130 characters)}
+\end{campotexto}
+
+\subsection{Acrónimo}
+\begin{campotexto}
+\instrucao{Acrónimo}
+\end{campotexto}
+
+\subsection{Palavras-chave (em português)}
+\begin{campotexto}
+\instrucao{Palavra-chave 1, palavra-chave 2, \ldots\ (até 4)}
+\end{campotexto}
+
+\subsection{Palavras-chave (em inglês)}
+\begin{campotexto}
+\instrucao{Keyword 1, keyword 2, \ldots\ (up to 4)}
+\end{campotexto}
+
+\subsection{Áreas científicas principais}
+\begin{campotexto}
+\instrucao{Engenharia Mecânica, \ldots}
+\end{campotexto}
+
+\subsection{Duração em meses}
+\begin{campotexto}
+\instrucao{N meses (entre 24 e 36)}
+\end{campotexto}
+
+\subsection{Identificação de questões éticas}
+\begin{campotexto}
+\instrucao{(Se aplicável)}
+\end{campotexto}
+
+\subsection{Caracterização dos proponentes}
+\begin{campotexto}
+\instrucao{Caracterizar a equipa e o consórcio (se aplicável), organização e conjugação de competências. A equipa deve ser organizada por funções e estar associada a conjuntos de atividades e tarefas diferentes. O mesmo conceito será aplicável aos consórcios.}
+
+\instrucao{No caso de consórcios, dois grupos podem trabalhar em conjunto para um objetivo comum, tal como um grupo pode ser o principal promotor de um projeto, coordenador e responsável pela proposta, tendo outro grupo a colaborar de forma localizada para a realização de uma dada atividade.}
+
+\instrucao{Podem ainda ser incluídos parceiros externos à Unidade Curricular (como outras empresas, grupos de investigação, entidades público-privadas, etc.).}
+\end{campotexto}
+
+% --- Macro auxiliar para tabelas de elementos internos ---
+\newcommand{\tabelaElemento}[1]{%
+  \begin{table}[H]
+  \centering\small
+  \begin{tabularx}{\textwidth}{L{0.32\textwidth} Y}
+    \toprule
+    \rowcolor{uatablehead}
+    \multicolumn{2}{l}{\sffamily\bfseries\color{uadark} #1} \\
+    \midrule
+    \sffamily\bfseries Identificação & \\ \arrayrulecolor{uaborder}\hline
+    \sffamily\bfseries Competências & \\ \hline
+    \sffamily\bfseries Funções no projeto & \\ \hline
+    \sffamily\bfseries Envolvimento no desenvolvimento da proposta (tópicos e percentagem global) & \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabularx}
+  \end{table}
+}
+
+% --- Macro auxiliar para tabelas de entidades externas ---
+\newcommand{\tabelaParceiro}[1]{%
+  \begin{table}[H]
+  \centering\small
+  \begin{tabularx}{\textwidth}{L{0.32\textwidth} Y}
+    \toprule
+    \rowcolor{uatablehead}
+    \multicolumn{2}{l}{\sffamily\bfseries\color{uadark} #1} \\
+    \midrule
+    \sffamily\bfseries Identificação & \\ \arrayrulecolor{uaborder}\hline
+    \sffamily\bfseries Representante & \\ \hline
+    \sffamily\bfseries Competências & \\ \hline
+    \sffamily\bfseries Funções no projeto & \\ \hline
+    \sffamily\bfseries Entidade / setor & \\ \hline
+    \sffamily\bfseries Elementos que constituem o proponente e respetiva função (facultativo) & \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabularx}
+  \end{table}
+}
+
+\tabelaElemento{Elemento 1 -- Entidade proponente \#1 (grupo)}
+\tabelaElemento{Elemento 2 -- Entidade proponente \#1 (grupo)}
+\tabelaElemento{Elemento 3 -- Entidade proponente \#1 (grupo)}
+\tabelaElemento{Elemento 1 -- Entidade proponente \#2 (grupo) -- Se existir}
+
+\tabelaParceiro{Entidade externa \#1, se existente (Parceiro)}
+\tabelaParceiro{Entidade externa \#2, se existente (Parceiro)}

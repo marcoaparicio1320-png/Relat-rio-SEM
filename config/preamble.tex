@@ -1,0 +1,147 @@
+% ==============================================================================
+% Configurações Gerais do Template — Seminários em Engenharia Mecânica (DEM@UA)
+% ==============================================================================
+
+% --- Codificação e Idioma ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{textcomp}
+\usepackage{microtype}
+
+% --- Tipografia: Apenas DUAS fontes ---
+% 1) Corpo de texto (serif): Charter
+% 2) Capa, títulos, cabeçalhos, rodapés e tabelas (sans-serif): Roboto
+\usepackage{charter}
+\usepackage{roboto}
+
+% --- Margens e Espaçamento ---
+\usepackage[
+  a4paper,
+  top=2.5cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm,
+  headheight=22pt
+]{geometry}
+\linespread{1.15}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% --- Paleta de Cores (Tons neutros + verde institucional UA/DEM, sem azulados) ---
+\usepackage[table]{xcolor}
+\definecolor{uagreen}{HTML}{6BA61E}      % Verde institucional DEM/UA
+\definecolor{uadark}{HTML}{222222}       % Grafite neutro escuro para títulos e destaque
+\definecolor{uamuted}{HTML}{595959}      % Cinzento neutro médio para rodapés/legendas
+\definecolor{ualightbg}{HTML}{F7F7F7}    % Cinzento neutro muito claro para caixas
+\definecolor{uatablehead}{HTML}{EBEBEB}  % Cinzento neutro suave para cabeçalhos de tabela
+\definecolor{uaborder}{HTML}{D4D4D4}     % Cinzento neutro para linhas de separação
+
+% --- Matemática e Números (separador decimal PT) ---
+\usepackage{amsmath, amssymb}
+\usepackage{icomma}
+
+% --- Figuras, Tabelas e Listas ---
+\usepackage{graphicx}
+\graphicspath{{figs/}}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[font={small,sf}, labelfont={bf,color=uadark}, skip=6pt]{caption}
+
+% Espaçamento vertical confortável nas tabelas
+\renewcommand{\arraystretch}{1.35}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% --- Hierarquia de Títulos (Roboto, maiores do que o texto 11pt) ---
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\sffamily\LARGE\bfseries\color{uadark}}
+  {\textcolor{uagreen}{\thesection}}{0.6em}{}
+  [\vspace{2pt}{\color{uagreen}\titlerule[1.2pt]}]
+\titlespacing*{\section}{0pt}{22pt}{10pt}
+
+\titleformat{\subsection}
+  {\sffamily\Large\bfseries\color{uadark}}
+  {\textcolor{uagreen}{\thesubsection}}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{16pt}{6pt}
+
+\titleformat{\subsubsection}
+  {\sffamily\large\bfseries\color{uamuted}}
+  {\textcolor{uagreen}{\thesubsubsection}}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{4pt}
+
+% --- Cabeçalhos e Rodapés ---
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\footnotesize\color{uamuted}Seminários em Engenharia Mecânica \textbar{} DEM -- UA}
+\fancyhead[R]{\sffamily\footnotesize\color{uamuted}\nouppercase{\leftmark}}
+\fancyfoot[L]{\sffamily\footnotesize\color{uamuted}Mestrado em Engenharia Mecânica 2026/2027}
+\fancyfoot[R]{\sffamily\footnotesize\color{uadark}\textbf{\thepage} / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{uaborder}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{frontmatter}{
+  \fancyhf{}
+  \fancyhead[L]{\sffamily\footnotesize\color{uamuted}Seminários em Engenharia Mecânica \textbar{} DEM -- UA}
+  \fancyhead[R]{\sffamily\footnotesize\color{uamuted}\nouppercase{\leftmark}}
+  \fancyfoot[L]{\sffamily\footnotesize\color{uamuted}Mestrado em Engenharia Mecânica 2026/2027}
+  \fancyfoot[R]{\sffamily\footnotesize\color{uadark}\textbf{\thepage}}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{uaborder}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% --- Caixa Moderna de Conteúdo (quebra automaticamente entre páginas) ---
+\usepackage[most]{tcolorbox}
+\newtcolorbox{campotexto}{
+  breakable,
+  enhanced,
+  colback=ualightbg,
+  colframe=ualightbg,
+  borderline west={2.5pt}{0pt}{uagreen},
+  boxrule=0pt,
+  arc=2pt,
+  left=10pt,
+  right=10pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=6pt,
+  after skip=10pt
+}
+
+% Estilo discreto para texto de orientação (substituir pelo conteúdo final)
+\newcommand{\instrucao}[1]{\leavevmode{\color{uamuted}\itshape #1}}
+
+% --- Bibliografia (BibTeX / natbib, estilo numérico) ---
+\usepackage[numbers,sort&compress]{natbib}
+\renewcommand{\bibsection}{}
+\setlength{\bibsep}{4pt}
+
+% --- Gráficos Vetoriais (para a Capa) ---
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% --- Hiperligações e Metadados PDF (sem cores azuladas) ---
+\usepackage[
+  colorlinks=true,
+  linkcolor=uadark,
+  urlcolor=uagreen,
+  citecolor=uagreen,
+  pdfborder={0 0 0}
+]{hyperref}
+\urlstyle{sf}
+
+% --- Comandos para Metadados do Relatório ---
+\newcommand{\tituloProjeto}{Título do Projeto de Inovação e I\&D}
+\newcommand{\acronimoProjeto}{ACRÓNIMO}
+\newcommand{\numeroGrupo}{Grupo \#}
+\newcommand{\anoLetivo}{2026/2027}

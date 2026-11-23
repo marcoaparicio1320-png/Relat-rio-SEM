@@ -1,0 +1,71 @@
+% ==============================================================================
+% Capa do Relatório (design limpo e moderno, apenas com a fonte sans-serif)
+% ==============================================================================
+\begin{titlepage}
+\thispagestyle{empty}
+
+% Faixa vertical lateral subtil (identidade UA / DEM)
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[uadark] (current page.north west) rectangle ([xshift=1.1cm]current page.south west);
+  \fill[uagreen] ([xshift=1.1cm]current page.north west) rectangle ([xshift=1.35cm]current page.south west);
+\end{tikzpicture}
+
+\sffamily
+\hspace*{0.8cm}%
+\begin{minipage}[t][0.94\textheight][t]{0.92\textwidth}
+
+  % Logótipo institucional UA / DEM
+  \vspace*{0.4cm}
+  \noindent\includegraphics[width=0.72\textwidth]{UA_DEM_vertical2.pdf}
+
+  \vspace{2.8cm}
+
+  % Identificação da Unidade Curricular
+  {\large\bfseries\color{uagreen} SEMINÁRIOS EM ENGENHARIA MECÂNICA}\\[0.35cm]
+  {\normalsize\color{uamuted} Mestrado em Engenharia Mecânica \textbar{} \anoLetivo}
+
+  \vspace{0.9cm}
+  \noindent\textcolor{uagreen}{\rule{3.5cm}{2pt}}
+  \vspace{0.9cm}
+
+  % Título Principal
+  {\fontsize{26}{32}\selectfont\bfseries\color{uadark} Relatório Final\par}
+  \vspace{0.35cm}
+  {\Large\color{uamuted} Proposta de projeto de inovação, investigação e desenvolvimento -- Ac5\par}
+
+  \vspace{1.4cm}
+
+  % Bloco de identificação do projeto
+  \begin{tcolorbox}[
+    colback=ualightbg,
+    colframe=uaborder,
+    boxrule=0.5pt,
+    arc=3pt,
+    left=14pt, right=14pt, top=12pt, bottom=12pt
+  ]
+    {\small\bfseries\color{uagreen} PROJETO \textbar{} \acronimoProjeto}\\[0.25cm]
+    {\Large\bfseries\color{uadark} \tituloProjeto}\\[0.25cm]
+    {\normalsize\color{uamuted} \numeroGrupo}
+  \end{tcolorbox}
+
+  \vspace{1.8cm}
+
+  % Autores
+  {\small\bfseries\color{uagreen} AUTORES}\\[0.35cm]
+  {\normalsize\color{uadark}
+    Primeiro Autor - N.º Mec: \#\#\\[0.15cm]
+    Segundo Autor - N.º Mec: \#\#\\[0.15cm]
+    Terceiro Autor - N.º Mec: \#\#\\[0.15cm]
+    Quarto Autor - N.º Mec: \#\#\\[0.15cm]
+    Quinto Autor - N.º Mec: \#\#\\[0.15cm]
+    Sexto Autor - N.º Mec: \#\#
+  }
+
+  \vfill
+
+  % Rodapé da capa
+  \noindent\textcolor{uaborder}{\rule{\textwidth}{0.5pt}}\\[0.3cm]
+  {\small\color{uamuted} Universidade de Aveiro \hfill \anoLetivo}
+
+\end{minipage}
+\end{titlepage}

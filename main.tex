@@ -1,0 +1,71 @@
+% ==============================================================================
+% Template de Relatório — Seminários em Engenharia Mecânica (MEM)
+% Departamento de Engenharia Mecânica, Universidade de Aveiro
+% ==============================================================================
+\documentclass[11pt,a4paper]{article}
+
+\input{config/preamble}
+
+% ------------------------------------------------------------------------------
+% IDENTIFICAÇÃO DO PROJETO (atualizar aqui para refletir na capa)
+% ------------------------------------------------------------------------------
+\renewcommand{\tituloProjeto}{Título do Projeto de Inovação e I\&D}
+\renewcommand{\acronimoProjeto}{ACRÓNIMO}
+\renewcommand{\numeroGrupo}{Grupo \#}
+\renewcommand{\anoLetivo}{2026/2027}
+
+% ==============================================================================
+\begin{document}
+
+% --- Capa ---
+\input{sections/0_capa}
+
+% --- Índice ---
+\newpage
+\pagestyle{frontmatter}
+\pagenumbering{roman}
+{\setlength{\parskip}{1pt}\tableofcontents}
+\newpage
+\pagestyle{fancy}
+\pagenumbering{arabic}
+
+% --- Secções do Relatório ---
+\section{Introdução}
+\label{sec:intro}
+\input{sections/1_introducao}
+
+\section{Descrição sumária da proposta}
+\label{sec:sumario}
+\input{sections/2_resumo}
+
+\section{Excelência técnico-científica}
+\label{sec:excelencia}
+\input{sections/3_excelencia}
+
+\section{Impacto do Projeto}
+\label{sec:impacto}
+\input{sections/4_impacto}
+
+\section{Qualidade e eficiência da execução}
+\label{sec:implementacao}
+\input{sections/5_implementacao}
+
+\section{Orçamento}
+\label{sec:orcamento}
+\input{sections/6_orcamento}
+
+\section{Referências Bibliográficas}
+\label{sec:referencias}
+\input{sections/7_referencias}
+
+\section{Declaração de Uso de Inteligência Artificial}
+\label{sec:declaracao_ia}
+\input{sections/8_declaracao_ia}
+
+% --- Nota final de entrega ---
+\vspace{1.2cm}
+\noindent\textcolor{uaborder}{\rule{\textwidth}{0.6pt}}
+\par\vspace{4pt}
+{\sffamily\footnotesize\color{uamuted}\textit{A versão final deste documento deve ser entregue em PDF. Eventuais anexos deverão ser incluídos no mesmo formato.}}
+
+\end{document}
