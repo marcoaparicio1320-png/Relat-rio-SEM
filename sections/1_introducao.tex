@@ -52,7 +52,7 @@
 \end{campotexto}
 
 % --- Macro auxiliar para tabelas de elementos internos ---
-\newcommand{\tabelaElemento}[1]{%
+\newcommand{\tabelaElemento}[5]{%
   \begin{table}[H]
   \centering\small
   \begin{tabularx}{\textwidth}{L{0.32\textwidth} Y}
@@ -60,10 +60,10 @@
     \rowcolor{uatablehead}
     \multicolumn{2}{l}{\sffamily\bfseries\color{uadark} #1} \\
     \midrule
-    \sffamily\bfseries Identificação & \\ \arrayrulecolor{uaborder}\hline
-    \sffamily\bfseries Competências & \\ \hline
-    \sffamily\bfseries Funções no projeto & \\ \hline
-    \sffamily\bfseries Envolvimento no desenvolvimento da proposta (tópicos e percentagem global) & \\
+    \sffamily\bfseries Identificação & #2 \\ \arrayrulecolor{uaborder}\hline
+    \sffamily\bfseries Competências & #3 \\ \hline
+    \sffamily\bfseries Funções no projeto & #4 \\ \hline
+    \sffamily\bfseries Envolvimento no desenvolvimento da proposta (tópicos e percentagem global) & #5 \\
     \arrayrulecolor{black}\bottomrule
   \end{tabularx}
   \end{table}
@@ -89,10 +89,27 @@
   \end{table}
 }
 
-\tabelaElemento{Elemento 1 -- Entidade proponente \#1 (grupo)}
+\tabelaElemento{Elemento 1 -- Entidade proponente \#1 (grupo 3)}
+{{Diana Baldaia}}
+{{Várias}}
+{{Chefe de projeto e definição do método das suspensões adaptativas}}
+{{Gestão da equipa e processos adaptativos de suspensão, 90\%}}
 \tabelaElemento{Elemento 2 -- Entidade proponente \#1 (grupo)}
+{{-}}
+{{-}}
+{{-}}
+{{-}}
+
 \tabelaElemento{Elemento 3 -- Entidade proponente \#1 (grupo)}
+{{-}}
+{{-}}
+{{-}}
+{{-}}
 \tabelaElemento{Elemento 1 -- Entidade proponente \#2 (grupo) -- Se existir}
+{{-}}
+{{-}}
+{{-}}
+{{-}}
 
 \tabelaParceiro{Entidade externa \#1, se existente (Parceiro)}
 \tabelaParceiro{Entidade externa \#2, se existente (Parceiro)}
